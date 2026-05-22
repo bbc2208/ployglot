@@ -6,8 +6,8 @@ export default defineConfig({
   manifest: {
     name: 'Polyglot - 智能网页翻译',
     description: '自动检测网页语言并翻译，支持输入反向翻译、划词翻译',
-    author: 'Polyglot',
-    homepage_url: 'https://github.com/your-org/polyglot',
+    author: 'bbc2208',
+    homepage_url: 'https://github.com/bbc2208/ployglot',
     permissions: ['storage'],
     host_permissions: ['https://tmt.tencentcloudapi.com/*'],
     icons: {
@@ -20,7 +20,7 @@ export default defineConfig({
     },
     browser_specific_settings: {
       gecko: {
-        id: 'polyglot@your-org.github.io',
+        id: 'ployglot@github.com',
         strict_min_version: '112.0',
       },
     },

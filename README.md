@@ -40,8 +40,8 @@
 ### 开发者安装
 
 ```bash
-git clone https://github.com/bbc2208/polyglot.git
-cd polyglot
+git clone https://github.com/bbc2208/ployglot.git
+cd ployglot
 npm install
 npm run build:chrome   # 或 build:firefox / build:edge
 ```
@@ -69,7 +69,7 @@ npm run build:chrome   # 或 build:firefox / build:edge
 - [腾讯云 TMT](https://cloud.tencent.com/product/tmt) — 机器翻译 API（TC3-HMAC-SHA256 签名）
 
 ## 隐私政策
-
+http://www.livesin.cn/ployglot/privacy.html
 本扩展会将网页文本发送至腾讯云 TMT API 以生成翻译结果。所有数据仅存储在浏览器本地，不上传至开发者服务器。
 
 详见 [隐私政策](privacy.html)
