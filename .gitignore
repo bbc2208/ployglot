@@ -1,0 +1,28 @@
+# Dependencies
+node_modules/
+
+# Build output
+.output/
+.wxt/
+
+# Sensitive files (API keys, credentials)
+SecretKey.csv
+*.pem
+*.key
+.env
+.env.local
+.env.*.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Claude
+.claude/settings.local.json

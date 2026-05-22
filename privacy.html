@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>隐私政策 / Privacy Policy — Polyglot</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+      background: #f5f5f5;
+      color: #333;
+      line-height: 1.7;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 40px 24px;
+    }
+    .card {
+      background: #fff;
+      border-radius: 12px;
+      padding: 40px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+      margin-bottom: 24px;
+    }
+    h1 {
+      font-size: 28px;
+      margin-bottom: 8px;
+      color: #1a1a2e;
+    }
+    .subtitle {
+      color: #888;
+      font-size: 14px;
+      margin-bottom: 32px;
+    }
+    h2 {
+      font-size: 18px;
+      color: #1a1a2e;
+      margin-top: 28px;
+      margin-bottom: 12px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid #eee;
+    }
+    p, li {
+      font-size: 14px;
+      color: #555;
+      margin-bottom: 8px;
+    }
+    ul {
+      padding-left: 20px;
+    }
+    .lang-switch {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 24px;
+    }
+    .lang-switch button {
+      padding: 6px 16px;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      background: #fff;
+      cursor: pointer;
+      font-size: 13px;
+    }
+    .lang-switch button.active {
+      background: #4a90d9;
+      color: #fff;
+      border-color: #4a90d9;
+    }
+    .en { display: none; }
+    body.show-en .zh { display: none; }
+    body.show-en .en { display: block; }
+    .last-updated {
+      color: #999;
+      font-size: 12px;
+      margin-top: 32px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <div class="lang-switch">
+    <button class="zh-btn active" onclick="document.body.classList.remove('show-en'); this.classList.add('active'); document.querySelector('.en-btn').classList.remove('active')">中文</button>
+    <button class="en-btn" onclick="document.body.classList.add('show-en'); this.classList.add('active'); document.querySelector('.zh-btn').classList.remove('active')">English</button>
+  </div>
+
+  <!-- ========== Chinese ========== -->
+  <div class="zh card">
+    <h1>隐私政策</h1>
+    <p class="subtitle">Polyglot - 智能网页翻译</p>
+
+    <p>本隐私政策说明 Polyglot 浏览器扩展（以下简称"本扩展"）如何收集、使用和存储您的数据。使用本扩展即表示您同意本政策。</p>
+
+    <h2>1. 我们收集哪些数据</h2>
+    <ul>
+      <li><strong>网页文本内容：</strong>为实现翻译功能，本扩展会读取当前网页中的可见文本节点，并发送至翻译服务。</li>
+      <li><strong>用户输入内容：</strong>当您使用输入翻译功能时，您在输入框中键入的文字会被读取并发送至翻译服务。</li>
+      <li><strong>划词选中内容：</strong>您在网页上选中的文本会被读取并发送至翻译服务。</li>
+      <li><strong>API 配置信息：</strong>您提供的腾讯云 SecretId、SecretKey 及区域设置存储在浏览器本地存储中。</li>
+      <li><strong>偏好设置：</strong>目标语言、翻译模式、黑名单等设置存储在浏览器本地。</li>
+    </ul>
+
+    <h2>2. 数据如何被使用</h2>
+    <ul>
+      <li>网页文本仅用于调用腾讯云机器翻译（TMT）API 以生成翻译结果。</li>
+      <li>翻译结果会缓存在您本地的浏览器存储中（内存和 IndexedDB），缓存有效期为 7 天，用于加速重复内容的翻译。</li>
+      <li>您的 API 密钥仅用于签署腾讯云 API 请求，不会发送至除腾讯云 API 端点外的任何服务器。</li>
+      <li>本扩展不会将任何数据上传至开发者服务器，所有数据仅存储在您的浏览器本地。</li>
+    </ul>
+
+    <h2>3. 第三方服务</h2>
+    <ul>
+      <li>本扩展使用<strong>腾讯云机器翻译（TMT）</strong>服务进行文本翻译和语言检测。</li>
+      <li>发送至腾讯云的文本数据受<a href="https://cloud.tencent.com/document/product/301/1967" target="_blank" rel="noopener noreferrer">腾讯云隐私政策</a>约束。</li>
+      <li>API 请求通过 HTTPS 加密传输。</li>
+      <li>除腾讯云 TMT API 外，本扩展不与任何其他第三方服务通信。</li>
+    </ul>
+
+    <h2>4. 数据存储与安全</h2>
+    <ul>
+      <li>API 密钥和偏好设置通过 Chrome/Firefox/Edge 的 <code>storage.local</code> API 加密存储。</li>
+      <li>翻译缓存存储在浏览器本地 IndexedDB 和内存中，7 天后自动过期。</li>
+      <li>本扩展<strong>不会</strong>将任何数据上传至开发者控制的服务器。</li>
+      <li>您可以通过选项页面随时清除翻译缓存，或通过浏览器设置清除扩展存储数据。</li>
+    </ul>
+
+    <h2>5. 用户权利</h2>
+    <ul>
+      <li>您可以随时在选项页面查看和修改 API 配置及偏好设置。</li>
+      <li>您可以随时卸载本扩展，卸载后所有本地存储数据将被清除。</li>
+      <li>您可以随时通过在选项页面删除 API 密钥来停止数据发送。</li>
+    </ul>
+
+    <h2>6. 免责声明</h2>
+    <p>本扩展为开源软件，按"原样"提供，不提供任何明示或暗示的保证。翻译质量取决于腾讯云 TMT 服务。开发者对因使用本扩展而产生的任何翻译错误、数据丢失或费用不承担责任。</p>
+
+    <h2>7. 联系我们</h2>
+    <p>如对本隐私政策有任何疑问，请在项目的 GitHub Issues 页面提交反馈。</p>
+
+    <p class="last-updated">最后更新日期：2026 年 5 月 22 日</p>
+  </div>
+
+  <!-- ========== English ========== -->
+  <div class="en card">
+    <h1>Privacy Policy</h1>
+    <p class="subtitle">Polyglot - Smart Web Translator</p>
+
+    <p>This Privacy Policy explains how the Polyglot browser extension ("the Extension") collects, uses, and stores your data. By using the Extension, you agree to this policy.</p>
+
+    <h2>1. What Data We Collect</h2>
+    <ul>
+      <li><strong>Webpage text content:</strong> To provide translation, the Extension reads visible text nodes from the current webpage and sends them to a translation service.</li>
+      <li><strong>User input content:</strong> When using the input translation feature, text you type into input fields is read and sent to the translation service.</li>
+      <li><strong>Selected text:</strong> Text you highlight on a webpage is read and sent to the translation service.</li>
+      <li><strong>API credentials:</strong> Your Tencent Cloud SecretId, SecretKey, and region settings are stored in your browser's local storage.</li>
+      <li><strong>Preferences:</strong> Target language, translation mode, blacklist, and other settings are stored locally in your browser.</li>
+    </ul>
+
+    <h2>2. How Data Is Used</h2>
+    <ul>
+      <li>Webpage text is used solely to call the Tencent Cloud Machine Translation (TMT) API to generate translations.</li>
+      <li>Translation results are cached locally in your browser (memory and IndexedDB) with a 7-day expiration to speed up repeated translations.</li>
+      <li>Your API credentials are used only to sign Tencent Cloud API requests and are never sent to any server other than the Tencent Cloud API endpoint.</li>
+      <li>The Extension does <strong>not</strong> upload any data to developer-controlled servers. All data is stored exclusively in your browser.</li>
+    </ul>
+
+    <h2>3. Third-Party Services</h2>
+    <ul>
+      <li>The Extension uses <strong>Tencent Cloud Machine Translation (TMT)</strong> for text translation and language detection.</li>
+      <li>Text data sent to Tencent Cloud is governed by the <a href="https://cloud.tencent.com/document/product/301/1967" target="_blank" rel="noopener noreferrer">Tencent Cloud Privacy Policy</a>.</li>
+      <li>API requests are transmitted over encrypted HTTPS connections.</li>
+      <li>Apart from the Tencent Cloud TMT API, the Extension does not communicate with any other third-party services.</li>
+    </ul>
+
+    <h2>4. Data Storage &amp; Security</h2>
+    <ul>
+      <li>API credentials and preferences are stored using the browser's <code>storage.local</code> API.</li>
+      <li>Translation cache is stored in the browser's local IndexedDB and memory, automatically expiring after 7 days.</li>
+      <li>The Extension does <strong>not</strong> upload any data to developer-controlled servers.</li>
+      <li>You can clear the translation cache at any time from the Options page, or clear extension storage via your browser settings.</li>
+    </ul>
+
+    <h2>5. User Rights</h2>
+    <ul>
+      <li>You can view and modify your API configuration and preferences at any time on the Options page.</li>
+      <li>You can uninstall the Extension at any time, which will remove all locally stored data.</li>
+      <li>You can stop data transmission at any time by removing your API credentials from the Options page.</li>
+    </ul>
+
+    <h2>6. Disclaimer</h2>
+    <p>The Extension is open-source software provided "as is" without warranty of any kind, express or implied. Translation quality depends on the Tencent Cloud TMT service. The developer is not responsible for any translation errors, data loss, or charges incurred through use of the Extension.</p>
+
+    <h2>7. Contact Us</h2>
+    <p>If you have any questions about this Privacy Policy, please submit feedback via the project's GitHub Issues page.</p>
+
+    <p class="last-updated">Last updated: May 22, 2026</p>
+  </div>
+</div>
+</body>
+</html>
